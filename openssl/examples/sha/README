@@ -4,7 +4,7 @@ Contact : truman.t.kim@gmail.com
 
 Simple example program for SHA using OPENSSL library.
 For the program, OPENSSL should be installed first in your local.
-And you can make it using kind of "gcc -o main main.c sha.c -lssl" command.
+And you can make it using kind of "gcc -o main main.c sha.c -lcrypto" command.
 
 @Information
     The SHA(Secure Hash Algorithm) is a family of cryptographic hash functions, firstly designed by NIST in 1993.

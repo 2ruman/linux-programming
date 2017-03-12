@@ -1,7 +1,9 @@
 /*
  * sha.h
  *
- *      Author: truman
+ *      Author  : Truman
+ *      Contact : truman.t.kim@gmail.com
+ *      Version : 1.1.0
  *
  */
 
@@ -11,10 +13,14 @@
 #include <string.h>
 #include <openssl/sha.h>
 
+#define ALGO_SHA256 0
+#define ALGO_SHA512 1
+
 #define SHA512_OUT_LEN SHA512_DIGEST_LENGTH
 #define SHA256_OUT_LEN SHA256_DIGEST_LENGTH
 
-unsigned char *do_sha256(char *msg, unsigned char *out);
-unsigned char *do_sha512(char *msg, unsigned char *out);
+unsigned char *hash_msg(char *msg, unsigned char *out, int algo);
+unsigned char *do_sha256(unsigned char *data, size_t size, unsigned char *out);
+unsigned char *do_sha512(unsigned char *data, size_t size, unsigned char *out);
 
 #endif /* SHA_H_ */

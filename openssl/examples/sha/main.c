@@ -1,11 +1,16 @@
 /*
  * main.c
  *
- *      Author: truman
+ *      Author  : Truman
+ *      Contact : truman.t.kim@gmail.com
  *
+ *      This is a test program to verify normal operation of the functions implemented,
+ *      at the same time, is a sample program for implying how to make use of them.
  */
 
 #include <stdio.h>
+#include <string.h>
+
 #include "sha.h"
 
 void print_hex(const char *tag, unsigned char *bytes, int len);
@@ -20,18 +25,26 @@ int main() {
 
     printf("Message : %s\n", msg);
 
-    /* At the moment, out must indicate hash_256 */
-    out = do_sha256(msg, hash_256);
+    /* Do hash and check the result. At the moment, out must indicate hash_256 */
+    out = hash_msg(msg, hash_256, ALGO_SHA256);
     print_hex("SHA256", out, SHA256_OUT_LEN);
 
-    /* At the moment, out must indicate hash_512 */
-    out = do_sha512(msg, hash_512);
+    /* Do hash and check the result. At the moment, out must indicate hash_256 */
+    out = do_sha256((unsigned char *)msg, strlen(msg), hash_256);
+    print_hex("SHA256", hash_256, SHA256_OUT_LEN);
+
+    /* Do hash and check the result. At the moment, out must indicate hash_512 */
+    out = hash_msg(msg, hash_512, ALGO_SHA512);
     print_hex("SHA512", out, SHA512_OUT_LEN);
+
+    /* Do hash and check the result. At the moment, out must indicate hash_512 */
+    out = do_sha512((unsigned char *)msg, strlen(msg), hash_512);
+    print_hex("SHA512", hash_512, SHA512_OUT_LEN);
     return 0;
 }
 
 /**
- * Utils
+ * Utils impl.
  */
 void print_hex(const char *tag, unsigned char *bytes, int len) {
     const char *HEX = "0123456789ABCDEF";
