@@ -38,7 +38,7 @@ fi
 
 $DIALOG --backtitle "$BACKTITLE" \
 	--title "$TITLE" \
-	--checklist "\nSelect files to remove under the path : $PWD" 0 50 $CNT \
+	--checklist "\nSelect files to remove under the path : $PWD" 0 0 $CNT \
 	$CHECKLIST 2> $TMP_FILE
 
 RET=$?
