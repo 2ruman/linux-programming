@@ -38,6 +38,7 @@ fi
 
 $DIALOG --backtitle "$BACKTITLE" \
 	--title "$TITLE" \
+	--ok-label "Remove" \
 	--checklist "\nSelect files to remove under the path : $PWD" 0 0 $CNT \
 	$CHECKLIST 2> $TMP_FILE
 
