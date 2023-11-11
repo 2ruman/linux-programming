@@ -1,8 +1,6 @@
+# Linux-programming - Bash
 
-clipper.sh
- : Clips a content of the given file from the given start point to the end point.
-
-selrm.sh
- : Facilitate straightforward delection with help from dialog.
+## bin (Binary)
+This directory is to collect links to actual executable files that you can utilize. Beforehand, you'd better add this directory to your PATH environment variable so that you can execute programs under this path from anywhere.
 
 
