@@ -25,6 +25,8 @@ if [ $BASE_NAME = "myenc" ]; then
     CMD="${REAL_PATH}/simple_aes/simple_aes.sh -e"
 elif [ $BASE_NAME = "mydec" ]; then
     CMD="${REAL_PATH}/simple_aes/simple_aes.sh -d"
+elif [ $BASE_NAME = "selrm" ]; then
+    CMD="${REAL_PATH}/selective_rm/selective_rm.sh"
 fi
 
 [[ -z $CMD ]] && echo "${BASE_NAME}: command not found" && exit 127
