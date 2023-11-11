@@ -1,0 +1,33 @@
+#!/bin/bash
+
+DEBUG=n
+
+BASE_NAME=$(basename $0)
+
+LINK_DIR=$(dirname $0)
+
+ORIG_PATH="${LINK_DIR}/.."
+
+REAL_PATH=$(realpath "${ORIG_PATH}")
+
+CMD=
+
+if [ $DEBUG = "y" ]; then
+    echo '$0        :' $0
+    echo '$@        :' $@
+    echo 'Base Name :' $BASE_NAME
+    echo 'Link Dir  :' $LINK_DIR
+    echo 'Orig Path :' $ORIG_PATH
+    echo 'Real Path :' $REAL_PATH
+fi
+
+if [ $BASE_NAME = "myenc" ]; then
+    CMD="${REAL_PATH}/simple_aes/simple_aes.sh -e"
+elif [ $BASE_NAME = "mydec" ]; then
+    CMD="${REAL_PATH}/simple_aes/simple_aes.sh -d"
+fi
+
+[[ -z $CMD ]] && echo "${BASE_NAME}: command not found" && exit 127
+
+$CMD "$@"
+exit $?
