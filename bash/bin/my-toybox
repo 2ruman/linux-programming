@@ -21,7 +21,9 @@ if [ $DEBUG = "y" ]; then
     echo 'Real Path :' $REAL_PATH
 fi
 
-if [ $BASE_NAME = "myenc" ]; then
+if [ $BASE_NAME = "cpoe" ]; then
+    CMD="${REAL_PATH}/cp_path_of_exe/cp_path_of_exe.sh"
+elif [ $BASE_NAME = "myenc" ]; then
     CMD="${REAL_PATH}/simple_aes/simple_aes.sh -e"
 elif [ $BASE_NAME = "mydec" ]; then
     CMD="${REAL_PATH}/simple_aes/simple_aes.sh -d"
