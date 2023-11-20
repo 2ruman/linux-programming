@@ -23,6 +23,8 @@ fi
 
 if [ $BASE_NAME = "cpoe" ]; then
     CMD="${REAL_PATH}/cp_path_of_exe/cp_path_of_exe.sh"
+elif [ $BASE_NAME = "lfn" ]; then
+    CMD="${REAL_PATH}/fmt_log_fn/fmt_log_fn.sh"
 elif [ $BASE_NAME = "myenc" ]; then
     CMD="${REAL_PATH}/simple_aes/simple_aes.sh -e"
 elif [ $BASE_NAME = "mydec" ]; then
