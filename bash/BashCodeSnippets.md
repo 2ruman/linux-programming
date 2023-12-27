@@ -2,6 +2,7 @@
 
 ### Contents
 + [Text](#text)
++ [Input](#input)
 <br>
 
 ## Text
@@ -36,4 +37,12 @@ echo -e 'RIGHT : \U2192'
 echo -e 'DOWN  : \U2193'
 echo -e 'L & R : \U2194'
 echo -e 'U & D : \U2195'
+```
+
+## Input
+
+### Wait until Keyevent
+```bash
+read -s -p "Press enter to continue"; echo
+read -s -n 1 -p "Press any key to continue"; echo
 ```
