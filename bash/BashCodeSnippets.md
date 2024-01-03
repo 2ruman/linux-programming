@@ -1,9 +1,18 @@
 # Bash Code Snippets
 
 ### Contents
++ [Basics](#basics)
 + [Text](#text)
 + [Input](#input)
 <br>
+
+## Basics
+
+### Get Current Shell's PID
+```bash
+MY_PID=$$
+echo $MY_PID
+```
 
 ## Text
 
