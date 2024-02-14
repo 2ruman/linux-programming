@@ -48,6 +48,11 @@ echo -e 'L & R : \U2194'
 echo -e 'U & D : \U2195'
 ```
 
+### Read Text File into Array
+```bash
+read -a lines -d EOF < sample.txt
+```
+
 ## Input
 
 ### Wait until Keyevent
