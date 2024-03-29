@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CIPHER="-aes-128-cbc"
-ENCODING="-base64"
+ENCODING="-base64 -A" # Base64 enc/decoding + Single line
 ADDITONAL_HASH="-pbkdf2"
 ENC_OR_DEC=$1
 INPUT_FILE=$2
