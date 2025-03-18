@@ -49,8 +49,30 @@ echo -e 'U & D : \U2195'
 ```
 
 ### Read Text File into Array
+
 ```bash
 read -a lines -d EOF < sample.txt
+```
+
+### Mock Spinner
+
+```bash
+#!/bin/bash
+
+spinner=(⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏)
+delay=0.1
+reps=5
+
+spin() {
+    for rep in $(seq 1 $reps); do
+        for i  in $(seq 0 9); do
+            printf "\r${spinner:$i:1} Processing..."
+            sleep $delay
+        done
+    done
+    echo -en "\r\033[2K"
+    echo "Finished!"
+}
 ```
 
 ## Input
