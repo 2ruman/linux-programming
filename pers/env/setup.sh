@@ -116,6 +116,13 @@ $(./get-git-conf.sh)
 EOF
 )"
 
+next_warned "[!] Please make sure if you already set up the ssh keys
+$(echo "$HOME/.ssh/:")
+$(ls -al ~/.ssh)" "$(cat << EOF
+ssh-keygen
+EOF
+)"
+
 next "$(cat << EOF
 sudo apt install -y curl
 sudo apt install -y tmux
@@ -135,7 +142,7 @@ EOF
 )"
 
 next_warned "[!] Please make sure that the VMware-Workstation installer is downloaded beforehand 
-# https://www.perforce.com/products/helix-core-apps/merge-diff-tool-p4merge" "$(cat << EOF
+# --> https://www.perforce.com/products/helix-core-apps/merge-diff-tool-p4merge" "$(cat << EOF
 sudo find ~/Downloads -name 'VMware*.bundle' -print  -exec chmod +x {} \; -exec {} \;
 EOF
 )"
