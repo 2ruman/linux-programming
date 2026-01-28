@@ -125,6 +125,7 @@ EOF
 
 next "$(cat << EOF
 sudo apt install -y curl
+sudo apt install -y xsel
 sudo apt install -y tmux
 sudo apt install -y synaptic
 sudo apt install -y terminator
