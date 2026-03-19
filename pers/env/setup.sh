@@ -124,10 +124,21 @@ EOF
 )"
 
 next "$(cat << EOF
+sudo apt install -y synaptic
+sudo apt install -y net-tools
+sudo apt install -y gnome-tweaks
+sudo apt install -y gnome-screenshot
+sudo apt install -y ranger
+sudo apt install -y ueberzug
+EOF
+)"
+
+next "$(cat << EOF
+sudo apt install -y vim
+sudo apt install -y vim-gtk3
 sudo apt install -y curl
 sudo apt install -y xsel
 sudo apt install -y tmux
-sudo apt install -y synaptic
 sudo apt install -y terminator
 sudo apt install -y sqlitebrowser
 sudo snap install intellij-idea-ultimate --classic
