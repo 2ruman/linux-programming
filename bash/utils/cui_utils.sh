@@ -30,15 +30,17 @@ function print_ylw() { echo -e "${YLW}${*}${NOC}"; }
 # Lightoing           : \U2607
 # Eighth Note         : \U266A
 # Warning Sign        : \U26A0
+# Check Mark          : \U2713
 
-function log_dent() { echo -e " ${BLK}\U2029 ${NOC} ${*}"; }
-function log_step() { echo -e " ${GRN}\U2192 ${NOC} ${*}"; }
-function log_over() { echo -e " ${PUP}\U2607 ${NOC} ${*}"; }
-function log_info() { echo -e " ${CYA}\U24D8 ${NOC} ${*}"; }
-function log_warn() { echo -e " ${YLW}\U26A0 ${NOC} ${*}"; }
-function log_erro() { echo -e " ${RED}\U0021 ${NOC} ${*}"; }
-function log_star() { echo -e " ${YLW}\U2605 ${NOC} ${*}"; }
-function log_note() { echo -e " ${BLK}\U266A ${NOC} ${*}"; }
+function log_dent() { echo -e " ${BLK}\U2029${NOC} ${*}"; }
+function log_step() { echo -e " ${GRN}\U2192${NOC} ${*}"; }
+function log_chk()  { echo -e " ${GRN}\U2713${NOC} ${*}"; }
+function log_over() { echo -e " ${PUP}\U2607${NOC} ${*}"; }
+function log_info() { echo -e " ${CYA}\U2139${NOC} ${*}"; }
+function log_warn() { echo -e " ${YLW}\U26A0${NOC} ${*}"; }
+function log_err()  { echo -e " ${RED}\U0021${NOC} ${*}"; }
+function log_star() { echo -e " ${YLW}\U2605${NOC} ${*}"; }
+function log_note() { echo -e " ${BLK}\U266A${NOC} ${*}"; }
 
 function pause() {
     read -n 1 -r -s -p "Press any key to continue... "; echo
